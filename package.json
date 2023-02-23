@@ -4,15 +4,50 @@
   "description": "A minimal Electron application, with PouchDB",
   "main": "main.js",
   "scripts": {
+    "dev": "cross-env-shell ELECTRON_DISABLE_SECURITY_WARNINGS=1 NODE_OPTIONS=--max-old-space-size=8192 electron .",
+    "lint": "eslint",
     "start": "electron .",
     "postinstall": "electron-rebuild"
   },
   "devDependencies": {
-    "electron": "^1.4.12",
-    "electron-rebuild": "^1.4.0"
+    "@types/node": "12.20.55",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "electron": "9.4.1",
+    "electron-rebuild": "^3.2.9",
+    "eslint": "^8.34.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
-    "pouchdb": "^6.1.0",
-    "pouchdb-adapter-node-websql": "^6.1.0"
+    "cross-env": "^7.0.3",
+    "pouchdb": "^8.0.1",
+    "pouchdb-adapter-http": "file:../lib/pouchdb-adapter-http-7.5.0.tgz",
+    "pouchdb-adapter-idb": "file:../lib/pouchdb-adapter-idb-7.5.0.tgz",
+    "pouchdb-adapter-indexeddb": "file:../lib/pouchdb-adapter-indexeddb-7.5.0.tgz",
+    "pouchdb-adapter-leveldb": "file:../lib/pouchdb-adapter-leveldb-7.5.0.tgz",
+    "pouchdb-adapter-leveldb-core": "file:../lib/pouchdb-adapter-leveldb-core-7.5.0.tgz",
+    "pouchdb-adapter-memory": "file:../lib/pouchdb-adapter-memory-7.5.0.tgz",
+    "pouchdb-adapter-node-sql": "file:../lib/pouchdb-adapter-node-sql-7.5.0.tgz",
+    "pouchdb-adapter-node-sql-core": "file:../lib/pouchdb-adapter-node-sql-core-7.5.0.tgz",
+    "pouchdb-adapter-node-websql": "file:../lib/pouchdb-adapter-node-websql-7.5.0.tgz",
+    "pouchdb-adapter-utils": "file:../lib/pouchdb-adapter-utils-7.5.0.tgz",
+    "pouchdb-adapter-websql": "file:../lib/pouchdb-adapter-websql-7.5.0.tgz",
+    "pouchdb-adapter-websql-core": "file:../lib/pouchdb-adapter-websql-core-7.5.0.tgz",
+    "pouchdb-all-dbs": "file:../lib/pouchdb-all-dbs-7.5.0.tgz",
+    "pouchdb-checkpointer": "file:../lib/pouchdb-checkpointer-7.5.0.tgz",
+    "pouchdb-collections": "file:../lib/pouchdb-collections-7.5.0.tgz",
+    "pouchdb-core": "file:../lib/pouchdb-core-7.5.0.tgz",
+    "pouchdb-errors": "file:../lib/pouchdb-errors-7.5.0.tgz",
+    "pouchdb-fetch": "file:../lib/pouchdb-fetch-7.5.0.tgz",
+    "pouchdb-find": "file:../lib/pouchdb-find-7.5.0.tgz",
+    "pouchdb-generate-replication-id": "file:../lib/pouchdb-generate-replication-id-7.5.0.tgz",
+    "pouchdb-json": "file:../lib/pouchdb-json-7.5.0.tgz",
+    "pouchdb-mapreduce": "file:../lib/pouchdb-mapreduce-7.5.0.tgz",
+    "pouchdb-md5": "file:../lib/pouchdb-md5-7.5.0.tgz",
+    "pouchdb-merge": "file:../lib/pouchdb-merge-7.5.0.tgz",
+    "pouchdb-migrate": "file:../lib/pouchdb-migrate-7.5.0.tgz",
+    "pouchdb-replication": "file:../lib/pouchdb-replication-7.5.0.tgz",
+    "pouchdb-utils": "file:../lib/pouchdb-utils-7.5.0.tgz",
+    "sqlite3": "^5.0.0"
   }
 }
