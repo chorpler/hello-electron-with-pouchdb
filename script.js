@@ -1,6 +1,7 @@
 const PouchDB = require('pouchdb');
 const adNodeSql = require('pouchdb-adapter-node-sql');
 const adIndexedDb = require('pouchdb-adapter-indexeddb');
+const log = require('ololog');
 
 let G;
 try {
@@ -27,10 +28,10 @@ PouchDB.plugin(adIndexedDb);
 var db = new PouchDB('mydb-idb');
 
 db.info().then(function (info) {
-  console.log(`IDB (old):\n`, info);
+  log(`IDB (old):\n`, info);
   $('#idb').innerHTML = '&#10004; We can use PouchDB with IndexedDB (old adapter)!';
 }).catch(function (err) {
-  console.error(`IDB (old) error:\n`, err);
+  log(`IDB (old) error:\n`, err);
   $('#idb').innerHTML = 'Error for IndexedDB (old)';
 });
 

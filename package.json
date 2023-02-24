@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "ololog": "^1.1.175",
     "pouchdb": "^8.0.1",
     "pouchdb-adapter-http": "file:../lib/pouchdb-adapter-http-7.5.0.tgz",
     "pouchdb-adapter-idb": "file:../lib/pouchdb-adapter-idb-7.5.0.tgz",
